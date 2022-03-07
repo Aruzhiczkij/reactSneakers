@@ -36,11 +36,20 @@ header {
   }
 }
 
-
 .search-block {
   border: 1px solid #f3f3f3;
   border-radius: 10px;
   padding: 0 15px;
+  position: relative;
+
+  .clear {
+    position: absolute;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    top: 14px;
+    right: 14px;
+  }
 
   input {
     border: 0;
@@ -137,6 +146,38 @@ header {
   &:active {
     background: darken(#9dd558, 5%);
   }
+}
+
+.back {
+  position: relative;
+  background: #9dd458;
+  border-radius: 18px;
+  display: flex;
+  gap: 20px;
+  padding-block: 18px;
+  padding-inline: 26px 31px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background: lighten(#9dd558, 5%);
+
+    .arrow {
+      transform: translateX(-5px);
+    }
+  }
+
+  &:active {
+    background: darken(#9dd558, 5%);
+  }
+}
+
+.arrow {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  transition: transform 0.15s ease-in-out;
 }
 
 .cartItem {
